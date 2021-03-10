@@ -57,13 +57,13 @@ const LeagueDetail = () => {
                     </Row>
                 </Container>
                 <div className="d-flex justify-content-center" style={{fontSize:'40px'}}>
-                    <a href={`https://${twitter}`} style={{color:'skyblue'}} target="_blank">
+                    <a href={`https://${twitter}`} style={{color:'skyblue'}}>
                         Twitter
                     </a>
-                    <a href={`https://${facebook}`} style={{color:'white', marginLeft:'10px'}} target="_blank">
+                    <a href={`https://${facebook}`} style={{color:'white', marginLeft:'10px'}}>
                         Facebook
                     </a>
-                    <a href={`https://${youtube}`} style={{color:'red', marginLeft:'10px'}} target="_blank">
+                    <a href={`https://${youtube}`} style={{color:'red', marginLeft:'10px'}}>
                         Youtube
                     </a>
                 </div>
