@@ -2,9 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { useHistory } from "react-router-dom";
 
 
 const Leagues = (props) => {
+
+    let history = useHistory();
+
+    function handleClick(leagueId) {
+        history.push(`/league/${leagueId}`);
+      }
+
     const{strLeague,strSport, idLeague} =props.lg;
     const [image, setImage] = useState({});
     useEffect(()=>{
@@ -38,7 +46,7 @@ const Leagues = (props) => {
                         <Card.Text>Sports type: {strSport}</Card.Text>
                         
                     </Card.Body>
-                    <Button variant="primary">Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button variant="primary" onClick={()=>handleClick(idLeague)}>Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card>
             </Col>
     );
