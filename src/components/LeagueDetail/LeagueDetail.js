@@ -32,7 +32,7 @@ const LeagueDetail = () => {
         <div style={{backgroundColor:'#0E0A2A'}}>
             <img src={headerImg} width="100%" height="400px" alt=""/>
             <div className="container">
-                <Container className="mt-3" style={{backgroundColor:"#3A42FF",borderRadius:"10px",color:"white"}}>
+                <Container className="mt-3" style={{backgroundColor:"#ED005F",borderRadius:"10px",color:"white"}}>
                     <Row style={{padding:'20px'}}>
                         <Col xs={12} md={8}>
                             <h3>{leagueName}</h3>

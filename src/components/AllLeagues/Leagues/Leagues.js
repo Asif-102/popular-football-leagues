@@ -25,7 +25,7 @@ const Leagues = (props) => {
     },[idLeague]);
 
     const badgeImg = (image[0])&&(image[0].strBadge);
-    
+
     const cardStyle = {
         width: '18rem', 
         marginTop:'20px',
@@ -48,7 +48,7 @@ const Leagues = (props) => {
                         <Card.Text>Sports type: {strSport}</Card.Text>
                         
                     </Card.Body>
-                    <Button variant="primary" onClick={()=>handleClick(idLeague)}>Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button style={{backgroundColor:'#ED005F'}} variant="primary" onClick={()=>handleClick(idLeague)}>Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card>
             </Col>
     );
