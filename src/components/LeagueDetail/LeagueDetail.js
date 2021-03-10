@@ -28,7 +28,6 @@ const LeagueDetail = () => {
     const twitter = (leagueInfo[0])&&(leagueInfo[0].strTwitter);
     const facebook = (leagueInfo[0])&&(leagueInfo[0].strFacebook);
     const youtube = (leagueInfo[0])&&(leagueInfo[0].strYoutube);
-    console.log(twitter);
     return (
         <div style={{backgroundColor:'#0E0A2A'}}>
             <img src={headerImg} width="100%" height="400px" alt=""/>
