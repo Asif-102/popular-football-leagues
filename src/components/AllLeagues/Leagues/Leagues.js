@@ -30,7 +30,7 @@ const Leagues = (props) => {
         marginRight:'auto'
     }
     return (
-            <Col xs={12} md={4}>
+            <Col xs={12} md={4} className="d-flex justify-content-center">
                <Card style={cardStyle}>
                     <Card.Img variant="top" src={badgeImg} style={cardImgStyle} />
                     <Card.Body>
@@ -38,7 +38,7 @@ const Leagues = (props) => {
                         <Card.Text>Sports type: {strSport}</Card.Text>
                         
                     </Card.Body>
-                    <Button variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button variant="primary">Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card>
             </Col>
     );

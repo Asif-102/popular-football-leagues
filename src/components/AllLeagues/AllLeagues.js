@@ -11,7 +11,6 @@ const AllLeagues = () => {
         .then(res=>res.json())
         .then(data=>setAllLeagues(data))
     },[]);
-
     return (
         <div style={{backgroundColor:'#0E0A2A'}}>
             <Header></Header>
