@@ -46,9 +46,8 @@ const Leagues = (props) => {
                     <Card.Body>
                         <Card.Title>{strLeague}</Card.Title>
                         <Card.Text>Sports type: {strSport}</Card.Text>
-                        
                     </Card.Body>
-                    <Button style={{backgroundColor:'#ED005F'}} variant="primary" onClick={()=>handleClick(idLeague)}>Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
+                    <Button style={{backgroundColor:'#ED005F'}} onClick={()=>handleClick(idLeague)}>Explore More <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card>
             </Col>
     );
