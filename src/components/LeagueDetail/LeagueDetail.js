@@ -5,7 +5,6 @@ import { Container,Row,Col } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPodcast, faFlag,  faFutbol, faMars } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
 
 const LeagueDetail = () => {
     const{idLeague} =useParams();
