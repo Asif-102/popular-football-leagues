@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import male from './../Photo/male.png';
+import female from './../Photo/female.png';
+import { Container,Row,Col } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPodcast, faFlag, faFootballBall,  faFutbol, faMars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const LeagueDetail = () => {
     const{idLeague} =useParams();
@@ -11,10 +17,59 @@ const LeagueDetail = () => {
         .then(data => setLeagueInfo(data.leagues))
     },[idLeague]);
     const headerImg = (leagueInfo[0])&&(leagueInfo[0].strFanart1);
+    const desCription = (leagueInfo[0])&&(leagueInfo[0].strDescriptionEN);
+    const leagueName = (leagueInfo[0])&&(leagueInfo[0].strLeague);
+    const startYear = (leagueInfo[0])&&(leagueInfo[0].intFormedYear);
+    const country = (leagueInfo[0])&&(leagueInfo[0].strCountry);
+    const sportsType = (leagueInfo[0])&&(leagueInfo[0].strSport);
+    const gender = (leagueInfo[0])&&(leagueInfo[0].strGender);
+    const twitter = (leagueInfo[0])&&(leagueInfo[0].strTwitter);
+    const facebook = (leagueInfo[0])&&(leagueInfo[0].strFacebook);
+    const youtube = (leagueInfo[0])&&(leagueInfo[0].strYoutube);
+    console.log(twitter);
     return (
-        <div>
-            <img src={headerImg} alt=""/>
-            <h1>detail page {idLeague}</h1>
+        <div style={{backgroundColor:'#0E0A2A'}}>
+            <img src={headerImg} width="100%" height="400px" alt=""/>
+            <div className="container">
+                <Container className="mt-3" style={{backgroundColor:"#3A42FF",borderRadius:"10px",color:"white"}}>
+                    <Row style={{padding:'20px'}}>
+                        <Col xs={12} md={8}>
+                            <h3>{leagueName}</h3>
+                            <p><FontAwesomeIcon icon={faPodcast} /> Founded: {startYear}</p>
+                            <p><FontAwesomeIcon icon={faFlag} /> Country: {country}</p>
+                            <p><FontAwesomeIcon icon={faFutbol} /> Sport Type: {sportsType}</p>
+                            <p><FontAwesomeIcon icon={faMars} /> Gender: {gender}</p>
+                        </Col>
+                        <Col xs={6} md={4}>
+                            {
+                                (gender.toLowerCase()) === 'male' ? 
+                                <img className="mt-4" src={male} style={{borderRadius:'10px',marginLeft:'40px'}} height="150px" alt=""/> 
+                                :
+                                <img className="mt-4" src={female} style={{borderRadius:'10px',marginLeft:'40px'}} height="150px" alt=""/>
+
+                            }
+                        </Col>
+                    </Row>
+                </Container>
+                <Container>
+                    <Row>
+                        <br/>
+                        <p style={{color:'white'}}>{desCription}</p>
+                    </Row>
+                </Container>
+                <div className="d-flex justify-content-center" style={{fontSize:'40px'}}>
+                    <a href={`https://${twitter}`} style={{color:'skyblue'}} target="_blank">
+                        Twitter
+                    </a>
+                    <a href={`https://${facebook}`} style={{color:'white', marginLeft:'10px'}} target="_blank">
+                        Facebook
+                    </a>
+                    <a href={`https://${youtube}`} style={{color:'red', marginLeft:'10px'}} target="_blank">
+                        Youtube
+                    </a>
+                </div>
+                <br/>
+            </div>
         </div>
     );
 };
