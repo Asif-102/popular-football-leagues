@@ -23,7 +23,9 @@ const Leagues = (props) => {
         .then(data => setImage(data.leagues))
 
     },[idLeague]);
+
     const badgeImg = (image[0])&&(image[0].strBadge);
+    
     const cardStyle = {
         width: '18rem', 
         marginTop:'20px',
