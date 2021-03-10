@@ -5,6 +5,9 @@ import { Container,Row,Col } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPodcast, faFlag,  faFutbol, faMars } from '@fortawesome/free-solid-svg-icons';
+import {FiTwitter} from "react-icons/fi";
+import {FaFacebookF} from "react-icons/fa";
+import {AiFillYoutube} from "react-icons/ai";
 
 const LeagueDetail = () => {
     const{idLeague} =useParams();
@@ -58,13 +61,13 @@ const LeagueDetail = () => {
                 </Container>
                 <div className="d-flex justify-content-center" style={{fontSize:'40px'}}>
                     <a href={`https://${twitter}`} style={{color:'skyblue'}}>
-                        Twitter
+                        <FiTwitter/>
                     </a>
-                    <a href={`https://${facebook}`} style={{color:'white', marginLeft:'10px'}}>
-                        Facebook
+                    <a href={`https://${facebook}`} style={{color:'white', marginLeft:'20px'}}>
+                        <FaFacebookF/>
                     </a>
-                    <a href={`https://${youtube}`} style={{color:'red', marginLeft:'10px'}}>
-                        Youtube
+                    <a href={`https://${youtube}`} style={{color:'red', marginLeft:'20px'}}>
+                        <AiFillYoutube/>
                     </a>
                 </div>
                 <br/>
