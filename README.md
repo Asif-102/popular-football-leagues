@@ -6,4 +6,4 @@ This is react project . I use react router for routing this website .
 
 I used **thesportsdb** api for collect data .
 
-[Live site] (https://ground-of-battle.netlify.app/)
+[Live site link] (https://ground-of-battle.netlify.app/)
