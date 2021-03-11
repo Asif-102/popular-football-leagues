@@ -44,9 +44,9 @@ const LeagueDetail = () => {
                         <Col xs={6} md={4}>
                             {
                                 gender === 'Male' ? 
-                                <img className="mt-4" src={male} style={{borderRadius:'10px',marginLeft:'40px'}} height="150px" alt=""/> 
+                                <img className="mt-4" src={male} style={{borderRadius:'10px'}} height="150px" alt=""/> 
                                 :
-                                <img className="mt-4" src={female} style={{borderRadius:'10px',marginLeft:'40px'}} height="150px" alt=""/>
+                                <img className="mt-4" src={female} style={{borderRadius:'10px'}} height="150px" alt=""/>
 
                             }
                         </Col>
